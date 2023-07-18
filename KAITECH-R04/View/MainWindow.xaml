@@ -1,0 +1,306 @@
+﻿<Window x:Class="KAITECH_R04.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Styles="clr-namespace:KAITECH_R04.Styles"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             WindowStyle="None"
+             Foreground="Transparent"
+             d:DesignHeight="450" d:DesignWidth="650" 
+             ResizeMode="NoResize" 
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center" 
+             ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+             HorizontalContentAlignment="Center" 
+             VerticalContentAlignment="Center" 
+             MaxWidth="650" MaxHeight="450" MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <Styles:MainWindowStyle/>
+    </Window.Resources>
+
+    <Border x:Name="MainB" 
+            Style="{DynamicResource Main_Border}">
+        <!--#region Main Grid -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--Header-->
+                <RowDefinition Height=".20*"/>
+                <!--Main-->
+                <RowDefinition/>
+                <!--Footer-->
+                <RowDefinition Height=".10*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--SideBar-->
+                <ColumnDefinition Width=".20*"/>
+                <!--Main-->
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border            Grid.Row="1"
+                              Grid.Column="0">
+                <TextBox x:Name="ColumnH_tx"       
+                          Margin="10,10,0,10" FontSize="8"
+                         
+                          />
+
+            </Border>
+            <!--#region Header Bar -->
+            <Border x:Name="Hedder_Panel"
+                    Style="{DynamicResource Header_Border}"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                    BorderThickness=" 0 0 0 1"
+                    BorderBrush="White">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <!--Left-->
+                        <ColumnDefinition Width=".30*"/>
+                        <!--Center-->
+                        <ColumnDefinition/>
+                        <!--Right-->
+                        <ColumnDefinition Width=".30*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--#region Center Area -->
+                    <TextBlock x:Name="Info_Hedder"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       TextBlock.FontSize="11"
+                       Foreground="#FFC99599"
+                       TextWrapping="Wrap"  
+                       VerticalAlignment="Bottom" 
+                       HorizontalAlignment="Left"/>
+                    <!--#endregion-->
+                    <!--#region Left Area -->
+                    <StackPanel Orientation="Vertical"
+                                x:Name="Logo_win"               
+                                 Grid.Column="0">
+                        <Image x:Name="IconTool" Height="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <!--#endregion-->
+                    <!--#region Right Area -->
+                    <StackPanel Grid.Column="2"
+                                HorizontalAlignment="Right"
+                                FlowDirection="RightToLeft"
+                                VerticalAlignment="Top"
+                                Orientation="Horizontal">
+                        <Ellipse x:Name="Close_Tip" 
+                                     Tag="Close" 
+                                     Style="{DynamicResource Ellipse_Bt}" 
+                                     MouseDown="Close_Tip_MouseDown">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFB84646" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse x:Name="Max_Tip" 
+                           Tag="Maximize"
+                           Style="{DynamicResource Ellipse_Bt}" 
+                                  MouseDown="Max_Tip_MouseDown" >
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FFFFF33D" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse x:Name="Mini_Tip" 
+                        Tag="Minimize" 
+                        Style="{DynamicResource Ellipse_Bt}" MouseDown="Mini_Tip_MouseDown" 
+                                     >
+                            <Ellipse.Fill>
+                                <RadialGradientBrush>
+                                    <GradientStop Color="#FF62C369" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </StackPanel>
+                    <!--#endregion-->
+                </Grid>
+            </Border>
+            <!--#endregion-->
+            <!--#region Log Area -->
+            <Border Grid.ColumnSpan="2"
+                    Grid.Row="2"
+                    BorderThickness="0,1,0,0"
+                    BorderBrush="White">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="Tx_Log"
+                               Text="KAITECH..........................."
+                               Foreground="#FF898989"
+                               Margin="10,0,0,0"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            <!--#endregion-->
+            <!--#region Main Area -->
+            <Border Grid.Column="1"
+                  Grid.Row="1"
+                    BorderThickness="0,0,0,0">
+                <Grid 
+                  Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="84.46"/>
+                        <ColumnDefinition Width="99*"/>
+                        <ColumnDefinition Width="99*"/>
+                        <ColumnDefinition Width="164*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".05*"/>
+                        <RowDefinition Height=".4*"/>
+                        <RowDefinition Height=".55*"/>
+                    </Grid.RowDefinitions>
+                    <!--#region Row 2 Column 1 -->
+                    <!--#region Selection Area -->
+                    <!--#endregion-->
+                    <!--#endregion-->
+
+                    <!--#region Row 2 -->
+                    <!--#region Column 0 To 3 -->
+                    <DataGrid x:Name="DataIntersectionGrid"
+                    Grid.ColumnSpan="3"
+                          Margin="0,0,5,13"
+                          Grid.RowSpan="2" 
+                          EnableColumnVirtualization="True"/>
+                    <!--#endregion-->
+                    <!--#region Column 3 -->
+                    <StackPanel Grid.Column="3"
+                             Grid.ColumnSpan="2"
+                             Grid.RowSpan="2" >
+                        <StackPanel Orientation="Horizontal">
+                            <Button  
+                         Height="23"
+                         Margin="5,0,1,0"
+                                Padding="5,0"
+                         x:Name="SelectOneElement_Bt"
+                         Content="Get All Columns Elements" Click="SelectOneElement_Bt_Click" />
+                            <Button  
+                         Height="23"
+                         Margin="5,0,5,0"
+                                Padding="5,0"
+                         x:Name="SelectAllElement_Bt"
+                         Content="Get All Elements" Click="SelectOneElement_Bt_Click" />
+                        </StackPanel>
+
+                        <Button  
+                         Height="23"
+                         Margin="5,5,5,0"
+                         x:Name="CreateSheets_Bt"
+                         Content="Create Views And Sheets At Columns Level" 
+                         Click="CreateSheetsClick_Bt" />
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                            <CheckBox Width="15"
+                                      Height="15"
+                                      x:Name="chk"
+                                      Foreground="White" Checked="CheckBox_Checked" Unchecked="chk_Unchecked"/>
+
+                            <ComboBox Margin="5,5,5,0"
+                                      Width="125"
+                                      Height="23"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalAlignment="Top"
+                                      x:Name="Views_cb" 
+                                      SelectionChanged="Views_cb_SelectionChanged"/>
+                            <Button  
+                         Height="23"
+                         Margin="0,5,5,0"
+                         Padding="25,0"
+                         x:Name="EditGrids_Bt"
+                         Content="Edit Grids" 
+                         Click="EditGrids_Bt_Click" />
+
+                        </StackPanel>
+
+                        <Button  
+                         Height="23"
+                         Margin="5,5,5,0"
+                         x:Name="GetIntersectioPoint_Bt"
+                         Content="Get Intersection Points Info" Click="GetIntersectioPoint_Bt_Click" />
+                        <StackPanel Orientation="Horizontal">
+                            <Button  
+                         Height="23"
+                         Margin="5,5,5,0"
+                         Padding="12,0,12,0"
+                         x:Name="GGridDim_Bt"
+                         Content="Grids Dimensions" 
+                         Click="GridDim_Bt_Click" />
+                            <Button  
+                         Height="23"
+                         Margin="0,5,5,0"
+                         Padding="11,0,11,0"
+                         x:Name="ColDim_Bt"
+                         Content="Columns Dimension" 
+                         Click="ColDim_Bt_Click" />
+                        </StackPanel>
+                    </StackPanel>
+                    <!--#endregion-->
+                    <!--#endregion-->
+                    <!--#region DataGrid -->
+                    <Border Grid.ColumnSpan="5"
+                    Grid.Row="3"
+                            Margin="0,0,5,0"
+                    BorderThickness="0,1,0,0"
+                    BorderBrush="White">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height=".2*"/>
+                                <RowDefinition Height=".8*"/>
+                            </Grid.RowDefinitions>
+                            <DataGrid x:Name="DataTestGrid"
+                              Grid.RowSpan="1"
+                              Grid.Row="1"
+                          Margin="0,5,0,0"
+                          EnableColumnVirtualization="True" SelectedCellsChanged="DataTestGrid_SelectedCellsChanged"/>
+                            <StackPanel Grid.Row="0"
+                                        Margin="0,5,0,0"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                                <TextBlock
+                               Text="Category Filter"
+                               Foreground="White"
+                               Margin="0,0,0,0"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                                <ComboBox Margin="5,5,5,0"
+                                          Width="127"
+                                          Height="23"
+                                          VerticalAlignment="Top"
+                                          x:Name="Category_cb" SelectionChanged="Category_cb_SelectionChanged"/>
+                                <Button  
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Right"
+                         Height="23"
+                         Margin="0,5,0,0"
+                         Padding="5,0,5,0"
+                         x:Name="ExToExcell_Bt"
+                         Content="Extract Data To Excell" 
+                         Click="ExData_Bt_Click" />
+                                <Button  
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                         Height="23"
+                         Margin="5,5,0,0"
+                         Padding="5,0,5,0"
+                         x:Name="ExDDataToExcell_Bt"
+                         Content="Extract Detailed Data To Excell" 
+                         Click="ExDData_Bt_Click" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <!--#endregion-->
+                </Grid>
+            </Border>
+            <!--#endregion-->
+        </Grid>
+        <!--#endregion-->
+    </Border>
+</Window>

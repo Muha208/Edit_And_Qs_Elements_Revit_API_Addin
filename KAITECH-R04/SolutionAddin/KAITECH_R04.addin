@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Name>KAITECH_R04</Name>
+    <Assembly>KAITECH_R04.dll</Assembly>
+    <ClientId>0FF6D2BB-76FF-4E16-8CE3-9AAA34DF912E</ClientId>
+    <FullClassName>KAITECH_R04.KAITECH_R04_Main</FullClassName>
+    <VendorId>Eng Muhammad</VendorId>
+    <Publisher>Eng Muhammad Osama</Publisher>
+    <VendorDescription>Eng Muhammad, BIM Developer, Revit API</VendorDescription>
+
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>KAITECH_R04</Name>
+    <Assembly>KAITECH_R04.dll</Assembly>
+    <ClientId>4B44A6B2-1751-496A-8B69-99E1CB80D476</ClientId>
+    <FullClassName>KAITECH_R04.KAITECH_R04_Main</FullClassName>
+    <VendorId>Eng Muhammad</VendorId>
+    <Publisher>Eng Muhammad Osama</Publisher>
+    <VendorDescription>Eng Muhammad, BIM Developer, Revit API</VendorDescription>
+
+  </AddIn>
+</RevitAddIns>
